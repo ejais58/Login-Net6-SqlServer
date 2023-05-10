@@ -1,0 +1,12 @@
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\bin\Debug\net6.0\AplicationCore.deps.json
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\bin\Debug\net6.0\AplicationCore.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\bin\Debug\net6.0\AplicationCore.pdb
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.csproj.AssemblyReference.cache
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.AssemblyInfoInputs.cache
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.AssemblyInfo.cs
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\refint\AplicationCore.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\AplicationCore.pdb
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\AplicationCore\obj\Debug\net6.0\ref\AplicationCore.dll
