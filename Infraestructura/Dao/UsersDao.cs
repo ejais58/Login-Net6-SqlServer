@@ -16,8 +16,8 @@ namespace Infraestructura.Dao
 {
     public class UsersDao : IUsersDao
     {
-        private string _connectionString = ConnectionString.Cadena();
-
+        private readonly string _connectionString = ConnectionString.Cadena();
+        
         public async Task AddUser(Users user)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -37,6 +37,44 @@ namespace Infraestructura.Dao
 
                 await command.ExecuteNonQueryAsync();
 
+            }
+        }
+
+        public async Task<Users> GetPsicologoById(int idPsicologo)
+        {
+            using(SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM Users WHERE Id = @idPsico", connection);
+                command.Parameters.AddWithValue("idPsico", idPsicologo);
+
+                await connection.OpenAsync();
+
+                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                if (reader.Read())
+                {
+                    // Se ha encontrado el usuario que coincide con el correo electrónico proporcionado
+                    int id = reader.GetInt32(reader.GetOrdinal("Id"));
+                    string nombre = reader.GetString(reader.GetOrdinal("Nombre"));
+                    string apellido = reader.GetString(reader.GetOrdinal("Apellido"));
+                    string email = reader.GetString(reader.GetOrdinal("Email"));
+                    string hashedPassword = reader.GetString(reader.GetOrdinal("Password"));
+                    string rol = reader.GetString(reader.GetOrdinal("Rol"));
+
+                    Users user = new Users
+                    {
+                        Id = id,
+                        Nombre = nombre,
+                        Apellido = apellido,
+                        Email = email,
+                        Password = hashedPassword,
+                        Rol = rol
+                    };
+
+                    return user;
+                }
+
+                return null;
             }
         }
 
@@ -60,6 +98,7 @@ namespace Infraestructura.Dao
                     string apellido = reader.GetString(reader.GetOrdinal("Apellido"));
                     string email = reader.GetString(reader.GetOrdinal("Email"));
                     string hashedPassword = reader.GetString(reader.GetOrdinal("Password"));
+                    string rol = reader.GetString(reader.GetOrdinal("Rol"));
 
                     Users user = new Users
                     {
@@ -67,7 +106,8 @@ namespace Infraestructura.Dao
                         Nombre = nombre,
                         Apellido = apellido,
                         Email = email,
-                        Password = hashedPassword
+                        Password = hashedPassword,
+                        Rol = rol
                     };
 
                     return user;
@@ -85,6 +125,7 @@ namespace Infraestructura.Dao
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM Users", connection);
                 await connection.OpenAsync();
+
                 using (SqlDataReader reader = await command.ExecuteReaderAsync())
                 {
                     List<Users> users = new List<Users>();
@@ -96,6 +137,7 @@ namespace Infraestructura.Dao
                         user.Apellido = reader.GetString(2);
                         user.Email = reader.GetString(3);
                         user.Password = reader.GetString(4);
+                        user.Rol = reader.GetString(5);
                         users.Add(user);
                     }
                     return users;

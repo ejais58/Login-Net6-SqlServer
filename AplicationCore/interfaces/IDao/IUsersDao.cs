@@ -14,7 +14,7 @@ namespace AplicationCore.interfaces
         Task AddUser(Users user);
         Task<Users> GetUserByEmailAndPassword(LoginDto login);
         
-
+        Task<Users> GetPsicologoById(int idPsicologo);
         
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AplicationCore.Entities;
 using AplicationCore.interfaces.IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -18,15 +19,20 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Users>> GetAllUsers()
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> GetAllUsers()
         {
-            return await _userService.GetAll();
+            List<Users> users = await _userService.GetAll();
+
+            return Ok(users);
         }
 
         [HttpPost]
-        public async Task CreateUser([FromBody] Users user)
+        public async Task<IActionResult> CreateUser([FromBody] Users user)
         {
             await _userService.Register(user);
+
+            return Ok();
         }
     }
 }

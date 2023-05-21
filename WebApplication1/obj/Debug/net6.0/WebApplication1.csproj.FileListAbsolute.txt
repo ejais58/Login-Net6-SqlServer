@@ -54,6 +54,11 @@ C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\n
 C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Infraestructura.dll
 C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\AplicationCore.pdb
 C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Infraestructura.pdb
-C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Konscious.Security.Cryptography.Argon2.dll
-C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Konscious.Security.Cryptography.Blake2.dll
 C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\BCrypt.Net.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Autofac.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Autofac.Integration.WebApi.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Elias Jais\Desktop\Extrados\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

@@ -18,9 +18,11 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public async Task<string> LoginUser([FromBody] LoginDto login)
+        public async Task<IActionResult> LoginUser([FromBody] LoginDto login)
         {
-            return await _userService.login(login);
+            string token = await _userService.login(login);
+
+            return Ok(token);
         }
     }
 }

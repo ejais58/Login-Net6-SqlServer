@@ -55,14 +55,15 @@ namespace WebApplication1.Service
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, user.Nombre),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Rol)
             };
 
             //crea una clave secreta simétrica para firmar y verificar tokens
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWT:Key").Value));
-            
+
             //credenciales
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha384Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 
             var securityToken = new JwtSecurityToken(
                                     claims: claims,
